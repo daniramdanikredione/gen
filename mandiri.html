@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Struk Pembayaran — Sederhana</title>
+<style>
+:root{
+--bg:#f6f8fb;
+--card:#ffffff;
+--muted:#8a92a6;
+--accent:#1e90ff;
+--success:#2f9e44;
+--line:#e6e9f2;
+font-family: "Helvetica Neue", Arial, sans-serif;
+}
+body{
+background: linear-gradient(180deg, #f7f9fc 0%, var(--bg) 100%);
+padding: 28px;
+display:flex;
+justify-content:center;
+}
+.receipt{
+width: 360px;
+background: var(--card);
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(20,30,80,0.08);
+overflow: hidden;
+border: 1px solid #eef1fb;
+}
+
+.header{
+padding:18px 20px;
+background-image: url("https://s12.gifyu.com/images/b950a.jpg");
+background-size:cover;
+background-position:center;
+}
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo {
+width:48px;
+height:48px;
+border-radius:8px;
+background: linear-gradient(135deg,#2ea0ff,#6fc3ff);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:700;
+font-size:18px;
+box-shadow: 0 4px 12px rgba(46,160,255,0.12);
+}
+.brand small{ display:block; color:var(--muted); font-size:11px; margin-top:2px; }
+
+.status{
+padding: 14px 20px;
+border-bottom: 1px solid var(--line);
+}
+.status h1{
+margin:0;
+font-size:18px;
+color:#111827;
+letter-spacing:0.2px;
+}
+.status .meta{
+margin-top:6px;
+color:var(--muted);
+font-size:12px;
+}
+
+.section{
+padding:16px 20px;
+}
+
+.provider{
+font-weight:700;
+font-size:15px;
+margin-bottom:6px;
+}
+.provider .sub{ color:var(--muted); font-weight:600; font-size:13px; margin-top:6px; display:block; }
+
+.detail{
+margin-top:8px;
+/*border-top:0.5px dashed var(--line);*/
+padding-top:12px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:6px 0;
+font-size:14px;
+}
+.row .label{ color:var(--muted); font-size:13px; }
+.row .value{ font-weight:700; color:#111827; }
+
+.divider{ height:2px; background:var(--line); margin:12px 0; }
+
+.total{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:16px;
+font-weight:bold;
+padding:1px 0;
+border-top:2px solid transparent;
+}
+.section-hitam { --line: #000; }
+.source{
+padding:14px 20px 22px 20px;
+border-top:1px solid var(--line);
+background: linear-gradient(180deg, rgba(250,251,255,0.7), transparent);
+}
+.source .name{ font-weight:800; font-size:14px; }
+.source .bank{ color:var(--muted); font-size:13px; margin-top:6px; }
+
+/* responsive smaller devices */
+@media (max-width:420px){
+.receipt{ width:94%; }
+}
+</style>
+</head>
+<body>
+<article class="receipt" role="article" aria-label="Struk pembayaran">
+<header class="header">
+<div class="brand" style="padding-bottom:3pt">
+<img src="https://i.imgur.com/ibpzqQY.png" width="90" >
+</div>
+<small style="color:grey;font-size:9pt;position:relative">Bayar</small>
+<h4 style="position:relative;margin-top:5pt;margin-bottom:5pt">Pembayaran Berhasil!</h4>
+<div class="meta" style="color:grey;font-size:8pt;position:relative;margin-bottom:5pt">28 Nov 2025 · 09:33:25 WIB · No. Ref. 702511041210301512</div>
+</header>
+<div style="background:#f2f2f2;width:100%;height:4pt;margin-bottom:5pt"></div>
+
+<div id="ppp" style="margin-left:10pt">
+<section class="section">
+<small style="color:grey;font-size:9pt;">Penyedia Jasa</small>
+<div class="provider" style="padding-top:7pt;position:relative"><h3 style="position:relative;margin-top:0pt;margin-bottom:5pt">Instamoney</h3>
+
+</div><p style="position:relative;color:black;font-size:9pt">8925195585246190 - ADHY HERMAWAN</p>
+<div class="divider"></div>
+
+<div class="detail">
+<small style="color:grey;font-size:10pt;">Detail Pembayaran</small>
+<div class="row">
+
+<div class="label" style="font-weight:bold;color:black">Nominal Transaksi</div>
+<div class="value">Rp 526.629</div>
+</div>
+<div class="divider"></div>
+
+<div class="row">
+<div class="label" style="color:black">Biaya Transaksi</div>
+<div class="value">Rp 2.500</div>
+</div>
+
+<div class="section-hitam"><div class="divider"></div></div>
+
+<div class="total">
+<div class="label">Total Transaksi</div>
+<div class="value">Rp 529.129</div>
+</div>
+<div class="section-hitam"><div class="divider"></div></div>
+
+
+</div><br>
+<small style="color:grey;font-size:10pt;position:relative;margin-bottom:5pt">Sumber Dana</small>
+<div class="row" style="position-relative;">
+
+<div class="label" style="color:black;position-relative;"><h1 style="display:inline-block;font-size:14pt;position-relative;margin-top:1pt;margin-bottom:1pt">ADHY HERMAWAN</h1></div></div>
+<small style="color:grey;font-size:9pt;position:relative;margin-bottom:5pt;">Bank Mandiri - <b>·········</b>8427 </small>
+</section>
+</div>
