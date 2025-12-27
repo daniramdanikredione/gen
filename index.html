@@ -11,14 +11,16 @@
 <style>
 
 	body {
-		background:rgb(231, 249, 239);
+		/*background:rgb(231, 249, 239); */
+        background-image:url("https://images.unsplash.com/photo-1617957718587-60a442884bee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdyZWVuJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww");
+        color:white;
 	}
     textarea {
         width: 100%;
         margin-bottom: 10px;
     }
     header, footer {
-        background-color: #f8f9fa;
+        background:transparent;
         padding: 15px 0;
         text-align: center;
     }
@@ -90,7 +92,7 @@ a.clicked-link {
         <textarea id="namesInput" rows="5" class="form-control" placeholder="Andi Saputra&#10;Budi Santoso&#10;Citra Dewi"></textarea>
     </div>
 
-    <button id="generateBtn" class="btn btn-primary mb-3">Generate Tabel</button>
+    <button style="background-image:url('https://wallpapercave.com/wp/wp2789949.jpg');color:white;font-weight:bold" id="generateBtn" class="btn mb-3">Generate Tabel</button>
 
     <!-- ROWS PER PAGE -->
     <div class="mb-3" id="paginationOptions" style="display:none;">
@@ -236,7 +238,6 @@ document.addEventListener("click", function (e) {
 
 </body>
 </html>
-
 
 
 
